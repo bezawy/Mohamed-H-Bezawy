@@ -1,0 +1,39 @@
+<svg 
+    width="100" 
+    height="100" 
+    viewBox="0 0 100 100" 
+    xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <!-- Define a drop shadow filter -->
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+            <feOffset in="blur" dx="2" dy="2" result="offsetBlur" />
+            <feFlood flood-color="#000" result="color" />
+            <feComposite in2="offsetBlur" operator="in" />
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <rect 
+        width="100" 
+        height="100" 
+        rx="10" 
+        fill="#14181F" />
+
+    <text 
+        x="50%" 
+        y="50%" 
+        fill="#D16C86" 
+        font-size="60" 
+        font-family="Arial" 
+        text-anchor="middle" 
+        alignment-baseline="middle" 
+        dominant-baseline="middle" 
+        filter="url(#shadow)">
+        B
+    </text>
+</svg>
